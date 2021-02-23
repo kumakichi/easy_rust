@@ -163,7 +163,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2><a class="header" href="#vectors" id="vectors">Vectors</a></h2>
+                        <h2 id="vectors"><a class="header" href="#vectors">Vectors</a></h2>
+<p><strong><a href="https://youtu.be/Eh-DsRnDKmw">See this chapter on YouTube</a></strong></p>
 <p>In the same way that we have <code>&amp;str</code> and <code>String</code>, we have arrays and vectors. Arrays are faster with less functionality, and vectors are slower with more functionality. (Of course, Rust is always very fast so vectors are not slow, just slow<em>er</em> than arrays.) The type is written <code>Vec</code>, and you can also just call it a &quot;vec&quot;.</p>
 <p>There are two main ways to declare a vector. One is like with <code>String</code> using <code>new</code>:</p>
 <pre><pre class="playground"><code class="language-rust">fn main() {
@@ -232,7 +233,7 @@ everything: {:?}&quot;, three_to_five, start_at_two, end_at_five, everything);
 4
 8
 </code></pre>
-<p>So this vector has three reallocations: 0 to 4, and 4 to 8. We can make it faster:</p>
+<p>So this vector has two reallocations: 0 to 4, and 4 to 8. We can make it faster:</p>
 <pre><pre class="playground"><code class="language-rust">fn main() {
     let mut num_vec = Vec::with_capacity(8); // Give it capacity 8
     num_vec.push('a'); // add one character
